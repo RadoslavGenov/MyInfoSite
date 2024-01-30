@@ -6,7 +6,7 @@
 
 .line {
   border: 1px solid #b2b2b2;
-  width: 100%;
+  width: auto;
   margin-bottom: 25px;
 }
 

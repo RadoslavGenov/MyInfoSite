@@ -13,6 +13,18 @@
   user-select: none;
 }
 
+@media (max-width: 480px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 15px;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
 .navLinks {
   border: 1px solid #131313b5;
   box-shadow: 0 2px 10px #0000001a;

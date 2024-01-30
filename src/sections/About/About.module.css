@@ -7,17 +7,22 @@
   padding: 30px;
 }
 
-@media (max-width: 480px) {
-  .container {
-    width: 100%;
-  }
-}
-
 .title {
   color: rgb(73, 186, 230);
   margin-top: 30px;
   padding-left: 20px;
   font-size: 25px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: auto;
+    padding: 0;
+  }
+
+  .title {
+    margin-top: 80px;
+  }
 }
 
 .description {
