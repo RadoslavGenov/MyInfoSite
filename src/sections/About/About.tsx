@@ -28,7 +28,7 @@ const About: React.FC<SectionProps> = ({ refs }) => {
         my skills to deliver cutting edge solutions that seemlessly integrate
         frontend and backend technologies. My commitment to staying abreast of
         the latest industry trends and best practices reflects my ambition to
-        contribute meani ngfully to the ever-evolving world of web development.
+        contribute meaningfully to the ever-evolving world of web development.
         Eager to tackle complex challenges, I thrive in collaborative
         environments and am driven by a relentless pursuit of excellence. My
         forward-thinking approach and dedication make me an asset to any team,
