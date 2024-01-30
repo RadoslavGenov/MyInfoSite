@@ -1,3 +1,4 @@
+import { SectionProps } from '../../types'
 import styles from './Work.module.css'
 
 const experience = [
@@ -28,16 +29,12 @@ const experience = [
       `Collaborate with clients to ensure product requirements are met.`,
       `Worked on many different project and was able to maintain focus in a very dynamic environment.`,
       `Integrated myself with ease in upcoming new projects.`,
-      `Learned the basics of working in a team and collaborating with other colleagues.`,
+      `Learned the basics of working in a team and collaborating with other colleagues.`
     ]
   }
 ]
 
-const Work = ({
-  refs
-}: {
-  refs: React.MutableRefObject<(HTMLDivElement | null)[]>
-}) => {
+const Work: React.FC<SectionProps> = ({ refs }) => {
   return (
     <div className={styles.container} ref={(el) => (refs.current[2] = el)}>
       <div className={styles.title}>Work Experience</div>

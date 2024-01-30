@@ -1,3 +1,4 @@
+import { SectionProps } from '../../types'
 import styles from './About.module.css'
 
 const skills = [
@@ -16,11 +17,7 @@ const skills = [
   'System Administration'
 ]
 
-const About = ({
-  refs
-}: {
-  refs: React.MutableRefObject<(HTMLDivElement | null)[]>
-}) => {
+const About: React.FC<SectionProps> = ({ refs }) => {
   return (
     <div ref={(el) => (refs.current[1] = el)} className={styles.container}>
       <div className={styles.title}>About</div>
