@@ -64,7 +64,7 @@
   },
   "scripts": {
     "start": "PORT=9000 node scripts/start.js",
-    "build": "NODE_ENV=production node scripts/build.js",
+    "build": "GENERATE_SOURCEMAP=false node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
