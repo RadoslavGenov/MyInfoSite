@@ -8,6 +8,7 @@
   flex-direction: column;
   font-size: 70px;
   color: rgb(73, 186, 230);
+  text-align: center;
 }
 
 .rowOne {
@@ -19,4 +20,14 @@
 
 .rowTwo {
   font-size: 70px;
+}
+
+@media (max-width: 480px) {
+  .rowOne {
+    font-size: 60px;
+  }
+
+  .rowTwo {
+    font-size: 40px;
+  }
 }

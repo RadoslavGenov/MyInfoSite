@@ -39,3 +39,17 @@
 .description {
   line-height: 25px;
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .item {
+    flex-direction: column;
+  }
+
+  .workDate {
+    margin-bottom: 15px;
+  }
+}

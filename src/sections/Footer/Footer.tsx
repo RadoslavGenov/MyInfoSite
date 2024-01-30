@@ -21,7 +21,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.line} />
       <div className={styles.copyRight}>
-        <div className={styles.text}> &copy; 2024 Rado</div>
+        <div className={styles.text}> &copy; 2024 Rado Tech</div>
         <div>
           <GithubOutlined
             className={styles.icon}

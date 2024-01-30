@@ -21,7 +21,7 @@
   border-radius: 30px;
   border: 1px solid transparent;
   transition: all 0.2s ease;
-  position: relative;
+  position: sticky;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   padding: 5px 10px;

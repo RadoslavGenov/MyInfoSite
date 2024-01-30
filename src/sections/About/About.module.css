@@ -7,6 +7,12 @@
   padding: 30px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}
+
 .title {
   color: rgb(73, 186, 230);
   margin-top: 30px;
@@ -16,7 +22,6 @@
 
 .description {
   padding: 20px;
-  text-align: flex-start;
   color: #b2b2b2;
   font-family: Rubik;
   line-height: 2em;
@@ -24,7 +29,6 @@
 
 .skills {
   padding: 20px;
-  text-align: flex-start;
   display: flex;
   flex: 1 0 21%;
   font-family: Rubik;
