@@ -6,7 +6,6 @@
 
 @media (max-width: 480px) {
   .container {
-    justify-content: flex-start;
     margin-bottom: 54px;
   }
 }
