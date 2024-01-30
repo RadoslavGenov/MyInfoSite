@@ -1,4 +1,5 @@
 import { SectionProps } from '../../types'
+import { Tab } from '../../constants'
 import styles from './About.module.css'
 
 const skills = [
@@ -19,7 +20,10 @@ const skills = [
 
 const About: React.FC<SectionProps> = ({ refs }) => {
   return (
-    <div ref={(el) => (refs.current[1] = el)} className={styles.container}>
+    <div
+      ref={(el) => (refs.current[Tab.About] = el)}
+      className={styles.container}
+    >
       <div className={styles.title}>About</div>
       <div className={styles.description}>
         As a highly motivated and detail-oriented Javascript developer, I bring

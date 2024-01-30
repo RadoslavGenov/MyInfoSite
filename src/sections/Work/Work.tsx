@@ -1,4 +1,5 @@
 import { SectionProps } from '../../types'
+import { Tab } from '../../constants'
 import styles from './Work.module.css'
 
 const experience = [
@@ -36,7 +37,10 @@ const experience = [
 
 const Work: React.FC<SectionProps> = ({ refs }) => {
   return (
-    <div className={styles.container} ref={(el) => (refs.current[2] = el)}>
+    <div
+      className={styles.container}
+      ref={(el) => (refs.current[Tab.Experience] = el)}
+    >
       <div className={styles.title}>Work Experience</div>
       {experience.map((item) => (
         <div key={item.company} className={styles.item}>

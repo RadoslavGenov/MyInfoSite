@@ -1,16 +1,11 @@
 import { useCallback, useState } from 'react'
 import styles from './NavHeader.module.css'
 import { useSetTabOnScroll } from './useSetTabOnScroll'
+import { Tab } from '../../constants'
 
 type NavHeaderProps = Readonly<{
   onLinkClick: (index: number) => void
 }>
-
-export enum Tab {
-  Home = 0,
-  About = 1,
-  Experience = 2
-}
 
 const NavHeader: React.FC<NavHeaderProps> = ({ onLinkClick }) => {
   const [active, setActive] = useState<Tab>(Tab.Home)
