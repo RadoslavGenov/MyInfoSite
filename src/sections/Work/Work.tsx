@@ -27,7 +27,7 @@ const experience = [
       `Advance my knowledge in libraries and frameworks such as React JS and React Native.`,
       `Be involved in team rituals, such as daily stand ups, refinements, plannings and retrospections.`,
       `Collaborate with clients to ensure product requirements are met.`,
-      `Worked on many different project and was able to maintain focus in a very dynamic environment.`,
+      `Worked on many different projects and was able to maintain focus in a very dynamic environment.`,
       `Integrated myself with ease in upcoming new projects.`,
       `Learned the basics of working in a team and collaborating with other colleagues.`
     ]
