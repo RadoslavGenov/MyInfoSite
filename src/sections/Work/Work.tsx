@@ -39,13 +39,13 @@ const Work: React.FC<SectionProps> = ({ refs }) => {
     <div className={styles.container} ref={(el) => (refs.current[2] = el)}>
       <div className={styles.title}>Work Experience</div>
       {experience.map((item) => (
-        <div className={styles.item}>
+        <div key={item.company} className={styles.item}>
           <div className={styles.workDate}>{item.workDate}</div>
           <div className={styles.description}>
             <div className={styles.company}>{item.company}</div>
             <div className={styles.description}>
               {item.description.map((desc) => (
-                <div>- {desc}</div>
+                <div key={desc}>- {desc}</div>
               ))}
             </div>
           </div>

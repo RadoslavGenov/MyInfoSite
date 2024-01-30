@@ -39,7 +39,9 @@ const About: React.FC<SectionProps> = ({ refs }) => {
       <div className={styles.title}>Skills and Technologies</div>
       <div className={styles.skills}>
         {skills.map((skill) => (
-          <div className={styles.item}>{skill}</div>
+          <div key={skill} className={styles.item}>
+            {skill}
+          </div>
         ))}
       </div>
     </div>

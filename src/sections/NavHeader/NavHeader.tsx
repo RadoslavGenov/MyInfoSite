@@ -1,38 +1,64 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import styles from './NavHeader.module.css'
+import { useSetTabOnScroll } from './useSetTabOnScroll'
 
-const NavHeader = ({ onLinkClick }: any) => {
-  const [active, setActive] = useState(0)
+type NavHeaderProps = Readonly<{
+  onLinkClick: (index: number) => void
+}>
 
-  const handleClick = (index: number) => () => {
+export enum Tabs {
+  Home = 0,
+  About = 1,
+  Experience = 2
+}
+
+const NavHeader: React.FC<NavHeaderProps> = ({ onLinkClick }) => {
+  const [active, setActive] = useState<Tabs>(Tabs.Home)
+
+  const handleClick = (index: Tabs) => () => {
     onLinkClick(index)
     setActive(index)
   }
+
+  const handleSetActiveTab = useCallback(
+    (index: Tabs) => {
+      setActive(index)
+    },
+    [setActive]
+  )
+
+  useSetTabOnScroll(handleSetActiveTab)
 
   return (
     <div className={styles.nav}>
       <div className={styles.navLinks}>
         <div
           className={
-            active === 0 ? styles.navLinksItemActive : styles.navLinksItem
+            active === Tabs.Home
+              ? styles.navLinksItemActive
+              : styles.navLinksItem
           }
-          onClick={handleClick(0)}
+          onClick={handleClick(Tabs.Home)}
         >
           Home
         </div>
         <div
           className={
-            active === 1 ? styles.navLinksItemActive : styles.navLinksItem
+            active === Tabs.About
+              ? styles.navLinksItemActive
+              : styles.navLinksItem
           }
-          onClick={handleClick(1)}
+          onClick={handleClick(Tabs.About)}
         >
           About
         </div>
         <div
           className={
-            active === 2 ? styles.navLinksItemActive : styles.navLinksItem
+            active === Tabs.Experience
+              ? styles.navLinksItemActive
+              : styles.navLinksItem
           }
-          onClick={handleClick(2)}
+          onClick={handleClick(Tabs.Experience)}
         >
           Experience
         </div>
