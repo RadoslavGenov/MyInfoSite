@@ -245,6 +245,7 @@ module.exports = function (webpackEnv) {
     infrastructureLogging: {
       level: 'none',
     },
+    
     optimization: {
       minimize: isEnvProduction,
       minimizer: [
