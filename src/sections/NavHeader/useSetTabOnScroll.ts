@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Tab } from './NavHeader'
+import { Tab } from '../../constants'
 
 type UseSetTabOnScroll = (setActive: (index: Tab) => void) => void
 
