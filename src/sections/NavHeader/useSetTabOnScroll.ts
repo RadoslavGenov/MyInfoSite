@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { Tabs } from './NavHeader'
+import { Tab } from './NavHeader'
 
-type UseSetTabOnScroll = (setActive: (index: Tabs) => void) => void
+type UseSetTabOnScroll = (setActive: (index: Tab) => void) => void
 
 export const useSetTabOnScroll: UseSetTabOnScroll = (setActive) => {
   useEffect(() => {
@@ -11,19 +11,19 @@ export const useSetTabOnScroll: UseSetTabOnScroll = (setActive) => {
       const clientHeight = ev.target.scrollingElement.clientHeight - 50
 
       if (top < clientHeight) {
-        setActive(Tabs.Home)
+        setActive(Tab.Home)
 
         return
       }
 
       if (top > clientHeight && top < clientHeight * 2) {
-        setActive(Tabs.About)
+        setActive(Tab.About)
 
         return
       }
 
       if (top > clientHeight * 2) {
-        setActive(Tabs.Experience)
+        setActive(Tab.Experience)
       }
     }
 

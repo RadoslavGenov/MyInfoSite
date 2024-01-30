@@ -6,59 +6,44 @@ type NavHeaderProps = Readonly<{
   onLinkClick: (index: number) => void
 }>
 
-export enum Tabs {
+export enum Tab {
   Home = 0,
   About = 1,
   Experience = 2
 }
 
 const NavHeader: React.FC<NavHeaderProps> = ({ onLinkClick }) => {
-  const [active, setActive] = useState<Tabs>(Tabs.Home)
+  const [active, setActive] = useState<Tab>(Tab.Home)
 
-  const handleClick = (index: Tabs) => () => {
+  const handleClick = (index: Tab) => () => {
     onLinkClick(index)
     setActive(index)
   }
 
   const handleSetActiveTab = useCallback(
-    (index: Tabs) => {
+    (index: Tab) => {
       setActive(index)
     },
     [setActive]
   )
+
+  const getStyle = (current: Tab) =>
+    active === current ? styles.navLinksItemActive : styles.navLinksItem
 
   useSetTabOnScroll(handleSetActiveTab)
 
   return (
     <div className={styles.nav}>
       <div className={styles.navLinks}>
-        <div
-          className={
-            active === Tabs.Home
-              ? styles.navLinksItemActive
-              : styles.navLinksItem
-          }
-          onClick={handleClick(Tabs.Home)}
-        >
+        <div className={getStyle(Tab.Home)} onClick={handleClick(Tab.Home)}>
           Home
         </div>
-        <div
-          className={
-            active === Tabs.About
-              ? styles.navLinksItemActive
-              : styles.navLinksItem
-          }
-          onClick={handleClick(Tabs.About)}
-        >
+        <div className={getStyle(Tab.About)} onClick={handleClick(Tab.About)}>
           About
         </div>
         <div
-          className={
-            active === Tabs.Experience
-              ? styles.navLinksItemActive
-              : styles.navLinksItem
-          }
-          onClick={handleClick(Tabs.Experience)}
+          className={getStyle(Tab.Experience)}
+          onClick={handleClick(Tab.Experience)}
         >
           Experience
         </div>
