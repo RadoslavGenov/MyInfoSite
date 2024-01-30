@@ -251,6 +251,7 @@ module.exports = function (webpackEnv) {
       minimize: isEnvProduction,
       minimizer: [
         // This is only used in production mode
+
         new UglifyJsPlugin({
           uglifyOptions: {
             warnings: false,
