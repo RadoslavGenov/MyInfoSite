@@ -14,7 +14,6 @@
   font-size: 25px;
 }
 
-
 .item {
   padding: 20px;
   color: #b2b2b2;
@@ -46,10 +45,6 @@
     width: auto;
     padding: 0;
     margin-top: 15px;
-  }
-
-  .title {
-    margin-top: 80px;
   }
 
   .item {

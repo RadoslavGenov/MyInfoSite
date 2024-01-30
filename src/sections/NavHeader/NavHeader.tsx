@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import styles from './NavHeader.module.css'
 import { useSetTabOnScroll } from './useSetTabOnScroll'
 import { Tab } from '../../constants'
@@ -15,12 +15,9 @@ const NavHeader: React.FC<NavHeaderProps> = ({ onLinkClick }) => {
     setActive(index)
   }
 
-  const handleSetActiveTab = useCallback(
-    (index: Tab) => {
-      setActive(index)
-    },
-    [setActive]
-  )
+  const handleSetActiveTab = (index: Tab) => {
+    setActive(index)
+  }
 
   const getStyle = (current: Tab) =>
     active === current ? styles.navLinksItemActive : styles.navLinksItem
@@ -28,20 +25,18 @@ const NavHeader: React.FC<NavHeaderProps> = ({ onLinkClick }) => {
   useSetTabOnScroll(handleSetActiveTab)
 
   return (
-    <div className={styles.nav}>
-      <div className={styles.navLinks}>
-        <div className={getStyle(Tab.Home)} onClick={handleClick(Tab.Home)}>
-          Home
-        </div>
-        <div className={getStyle(Tab.About)} onClick={handleClick(Tab.About)}>
-          About
-        </div>
-        <div
-          className={getStyle(Tab.Experience)}
-          onClick={handleClick(Tab.Experience)}
-        >
-          Experience
-        </div>
+    <div className={styles.navLinks}>
+      <div className={getStyle(Tab.Home)} onClick={handleClick(Tab.Home)}>
+        Home
+      </div>
+      <div className={getStyle(Tab.About)} onClick={handleClick(Tab.About)}>
+        About
+      </div>
+      <div
+        className={getStyle(Tab.Experience)}
+        onClick={handleClick(Tab.Experience)}
+      >
+        Experience
       </div>
     </div>
   )
