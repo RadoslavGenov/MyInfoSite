@@ -1,0 +1,23 @@
+.container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  border: 1px solid #b2b2b2;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.copyRight {
+  display: flex;
+  justify-content: space-between;
+  color: #b2b2b2;
+  margin-bottom: 40px;
+}
+
+.icon {
+  margin-left: 20px;
+  font-size: 20px;
+}

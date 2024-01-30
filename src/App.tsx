@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useRef } from 'react'
+import styles from './App.module.css'
+import About from './sections/About/About'
+import Home from './sections/Home/Home'
+import NavHeader from './sections/NavHeader/NavHeader'
+import Work from './sections/Work/Work'
+import Footer from './sections/Footer/Footer'
 
 function App() {
+  const refs = useRef<Array<HTMLDivElement | null>>([])
+
+  const handleLinkClick = (index: number) => {
+    refs.current[index]?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.main}>
+      <NavHeader onLinkClick={handleLinkClick} />
+      <Home refs={refs} />
+      <About refs={refs} />
+      <Work refs={refs} />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 70%;
+  margin-bottom: 200px;
+  padding: 30px;
+}
+
+.title {
+  color: rgb(73, 186, 230);
+  margin-top: 30px;
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+.description {
+  padding: 20px;
+  text-align: flex-start;
+  color: #b2b2b2;
+  font-family: Rubik;
+  line-height: 2em;
+}
+
+.skills {
+  padding: 20px;
+  text-align: flex-start;
+  display: flex;
+  flex: 1 0 21%;
+  font-family: Rubik;
+  line-height: 2em;
+  flex-wrap: wrap;
+}
+
+.item {
+  color: rgb(73, 186, 230);
+  border-radius: 1px;
+  border: 1px solid rgb(30, 152, 200);
+  margin: 3px;
+  display: flex;
+  text-wrap: nowrap;
+  padding: 0 4px;
+}

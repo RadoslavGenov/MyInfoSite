@@ -1,0 +1,22 @@
+.title {
+  font-family: Rubik;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 70px;
+  color: rgb(73, 186, 230);
+}
+
+.rowOne {
+  font-size: 80px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.rowTwo {
+  font-size: 70px;
+}

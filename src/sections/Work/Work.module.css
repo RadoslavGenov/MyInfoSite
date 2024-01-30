@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 70%;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+.title {
+  color: rgb(73, 186, 230);
+  margin-top: 30px;
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+.item {
+  padding: 20px;
+  color: #b2b2b2;
+  display: flex;
+}
+
+.workDate {
+  min-width: 200px;
+  flex-grow: 1;
+  padding-top: 3px;
+}
+
+.description {
+  flex-grow: 5;
+}
+
+.company {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.description {
+  line-height: 25px;
+}
