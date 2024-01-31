@@ -30,7 +30,15 @@ const experience = [
       `Collaborate with clients to ensure product requirements are met.`,
       `Worked on many different projects and was able to maintain focus in a very dynamic environment.`,
       `Integrated myself with ease in upcoming new projects.`,
-      `Learned the basics of working in a team and collaborating with other colleagues.`
+      `Participated in problem solving as a team and collaborating with other colleagues.`
+    ]
+  },
+  {
+    workDate: 'June 2017 - July 2017',
+    company: 'Zariba Games - Software Development Intern',
+    description: [
+      `Invested in bug fixing on a project based on Django Web framework.`,
+      `Learned the basic of programming and working in a team.`
     ]
   }
 ]
@@ -47,7 +55,7 @@ const Work: React.FC<SectionProps> = ({ refs }) => {
           <div className={styles.workDate}>{item.workDate}</div>
           <div className={styles.description}>
             <div className={styles.company}>{item.company}</div>
-            <div className={styles.description}>
+            <div className={styles.descriptionItem}>
               {item.description.map((desc) => (
                 <div key={desc}>- {desc}</div>
               ))}

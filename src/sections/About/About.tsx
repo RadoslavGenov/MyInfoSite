@@ -18,6 +18,13 @@ const skills = [
   'System Administration'
 ]
 
+const experience = [
+  {
+    date: 'Sept 2014 - May 2018',
+    university: 'American University in Bulgaria - Computer Science Major'
+  }
+]
+
 const About: React.FC<SectionProps> = ({ refs }) => {
   return (
     <div
@@ -39,6 +46,14 @@ const About: React.FC<SectionProps> = ({ refs }) => {
         and I am excited about the limitless possibilities for growth in my
         future endeavors.
       </div>
+
+      <div className={styles.title}>Education</div>
+      {experience.map((item) => (
+        <div key={item.university} className={styles.education}>
+          <div className={styles.date}>{item.date}</div>
+          <div className={styles.educationInfo}>{item.university}</div>
+        </div>
+      ))}
 
       <div className={styles.title}>Skills and Technologies</div>
       <div className={styles.skills}>
